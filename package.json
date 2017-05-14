@@ -1,0 +1,61 @@
+{
+  "name": "micro-rss-parser",
+  "description": "Parse rss to json",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=7.10.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "start": "micro",
+    "now-deploy": "npm test && now --npm && now alias"
+  },
+  "keywords": [
+    "microservice",
+    "micro",
+    "rss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telemark/micro-rss-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/micro-rss-parser/issues"
+  },
+  "homepage": "https://github.com/micro-rss-parser/micro-rss-parser",
+  "now": {
+    "alias": [
+      "parser.rss.tjeneste.win"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "type": "npm"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "coveralls": "2.13.1",
+    "nsp": "2.6.3",
+    "nyc": "10.3.2",
+    "standard": "10.0.2",
+    "test-listen": "1.0.2"
+  },
+  "dependencies": {
+    "axios": "0.16.1",
+    "feedme": "1.0.0",
+    "marked": "0.3.6",
+    "micro": "7.3.3"
+  }
+}
