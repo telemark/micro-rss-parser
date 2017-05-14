@@ -37,7 +37,7 @@
   "homepage": "https://github.com/micro-rss-parser/micro-rss-parser",
   "now": {
     "alias": [
-      "parser.rss.tjeneste.win"
+      "parser.rss.micro.t-fk.no"
     ],
     "env": {
       "NODE_ENV": "production"
