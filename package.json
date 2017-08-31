@@ -1,7 +1,7 @@
 {
   "name": "micro-rss-parser",
   "description": "Parse rss to json",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "private": true,
   "author": {
@@ -56,6 +56,6 @@
     "axios": "0.16.2",
     "feedme": "1.0.1",
     "marked": "0.3.6",
-    "micro": "8.0.4"
+    "micro": "8.0.2"
   }
 }
