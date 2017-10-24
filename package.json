@@ -45,7 +45,7 @@
     "type": "npm"
   },
   "devDependencies": {
-    "ava": "0.22.0",
+    "ava": "0.23.0",
     "coveralls": "3.0.0",
     "nsp": "2.8.1",
     "nyc": "11.1.0",
