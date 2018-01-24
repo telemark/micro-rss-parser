@@ -44,7 +44,10 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "type": "npm"
+    "type": "npm",
+    "engines": {
+      "node": "8.9.4"
+    }
   },
   "devDependencies": {
     "ava": "0.24.0",
