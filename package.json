@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.10.0"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -20,7 +20,9 @@
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
     "start": "micro",
-    "now-deploy": "npm test && now --npm && now alias"
+    "dev": "micro-dev",
+    "deploy": "npm test && now && now alias",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "microservice",
@@ -29,12 +31,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/telemark/micro-rss-parser.git"
+    "url": "git+https://github.com/telemark/micro-rss-parser.git"
   },
   "bugs": {
     "url": "https://github.com/telemark/micro-rss-parser/issues"
   },
-  "homepage": "https://github.com/micro-rss-parser/micro-rss-parser",
+  "homepage": "https://github.com/micro-rss-parser/micro-rss-parser#readme",
   "now": {
     "alias": [
       "parser.rss.micro.t-fk.no"
@@ -47,6 +49,7 @@
   "devDependencies": {
     "ava": "0.24.0",
     "coveralls": "3.0.0",
+    "micro-dev": "2.2.0",
     "nsp": "3.1.0",
     "nyc": "11.4.1",
     "standard": "10.0.3",
@@ -56,6 +59,6 @@
     "axios": "0.17.1",
     "feedme": "1.1.2",
     "marked": "0.3.12",
-    "micro": "8.0.2"
+    "micro": "9.1.0"
   }
 }
