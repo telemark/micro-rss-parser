@@ -55,7 +55,7 @@
   "dependencies": {
     "axios": "0.17.1",
     "feedme": "1.1.2",
-    "marked": "0.3.9",
+    "marked": "0.3.12",
     "micro": "8.0.2"
   }
 }
