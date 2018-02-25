@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "axios": "0.18.0",
-    "feedme": "1.1.2",
+    "feedme": "1.2.0",
     "marked": "0.3.16",
     "micro": "9.1.0"
   }
