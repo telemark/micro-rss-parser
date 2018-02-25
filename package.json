@@ -59,7 +59,7 @@
     "test-listen": "1.1.0"
   },
   "dependencies": {
-    "axios": "0.17.1",
+    "axios": "0.18.0",
     "feedme": "1.1.2",
     "marked": "0.3.16",
     "micro": "9.1.0"
