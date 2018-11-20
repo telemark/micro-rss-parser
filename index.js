@@ -1,4 +1,4 @@
-const { readFile } = require('fs').promises
+const { readFileSync } = require('fs')
 const marked = require('marked')
 const { parse } = require('url')
 const { json, send } = require('micro')
@@ -12,7 +12,7 @@ module.exports = async (request, response) => {
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, parsed)
   } else {
-    const readme = await readFile('./README.md', 'utf-8')
+    const readme = readFileSync('./README.md', 'utf-8')
     send(response, 200, marked(readme))
   }
 }
