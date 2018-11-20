@@ -1,6 +1,4 @@
-'use strict'
-
-const readFileSync = require('fs').readFileSync
+const { readFile } = require('fs').promises
 const marked = require('marked')
 const { parse } = require('url')
 const { json, send } = require('micro')
@@ -14,8 +12,7 @@ module.exports = async (request, response) => {
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, parsed)
   } else {
-    const readme = readFileSync('./README.md', 'utf-8')
-    const html = marked(readme)
-    send(response, 200, html)
+    const readme = await readFile('./README.md', 'utf-8')
+    send(response, 200, marked(readme))
   }
 }
