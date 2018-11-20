@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/micro-rss-parser.svg?branch=master)](https://travis-ci.org/telemark/micro-rss-parser)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-rss-parser.svg)](https://greenkeeper.io/)
 
 # micro-rss-parser
 Parse rss to json
@@ -70,5 +69,3 @@ $ now https://github.com/telemark/micro-rss-parser
 ## License
 
 [MIT](LICENSE)
-
-![micro-echo](https://robots.kebabstudios.party/micro-rss-parser.png "Robohash image of micro-rss-parser")
