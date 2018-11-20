@@ -1,5 +1,6 @@
 # IDE
 .idea
+.vs
 .vscode
 
 # Mac OS
@@ -45,6 +46,3 @@ jspm_packages
 
 # env
 .env
-
-# lock files
-package-lock.json
