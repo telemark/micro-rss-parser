@@ -1,19 +1,11 @@
-# Setting the base to nodejs 8.9.4
-FROM node:8.12.0-alpine@sha256:d75742c5fd41261113ed4706f961a21238db84648c825a5126ada373c361f46e
+FROM mhart/alpine-node:10 as base
+WORKDIR /usr/src
+COPY package.json package-lock.json /usr/src/
+RUN npm i --production
+COPY . .
 
-# Bundle app source
-COPY . /src
-
-# Change working directory
-WORKDIR "/src"
-
-# Install dependencies
-RUN npm install --production
-
-ENV NODE_ENV production
-
-# Expose 3000
+FROM mhart/alpine-node:base-10
+WORKDIR /usr/src
+COPY --from=base /usr/src .
 EXPOSE 3000
-
-# Startup
-ENTRYPOINT npm start
+CMD ["node", "./node_modules/.bin/micro"]
