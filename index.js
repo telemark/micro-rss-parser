@@ -1,5 +1,3 @@
-const { readFileSync } = require('fs')
-const marked = require('marked')
 const { parse } = require('url')
 const { json, send } = require('micro')
 const getFeed = require('./lib/get-feed')
@@ -12,7 +10,18 @@ module.exports = async (request, response) => {
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST')
     send(response, 200, parsed)
   } else {
-    const readme = readFileSync('./README.md', 'utf-8')
-    send(response, 200, marked(readme))
+    const readme = `
+      Usage
+      *****************************
+      
+      GET ?rss=your-rss-url
+
+      curl -v https://echo.mikrotjeneste.win?rss=https://www.telemark.no/rss/feed/aktuelt
+
+      POST { "rss": your-rss-url }
+
+      curl -v https://parse.rss.tjeneste.win -d '{"rss": "https://www.telemark.no/rss/feed/aktuelt"}'
+    `
+    send(response, 200, readme)
   }
 }
