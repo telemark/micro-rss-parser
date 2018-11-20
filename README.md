@@ -62,8 +62,12 @@ Both returns
 
 ## Deploy using [Now](https://zeit.co/now)
 
+- clone the project
+- change [now.json](now.json)
+- deploy
+
 ```bash
-$ now https://github.com/telemark/micro-rss-parser
+$ npm run deploy
 ```
 
 ## License
